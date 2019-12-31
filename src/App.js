@@ -1,17 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
 import Header from './Header';
-import Projects from './Projects';
-import Contact from './Contact';
-import './App.css';
+import Content from './Content';
+import { GlobalStyle } from './theme/globalStyle';
+
+const AppStyles = styled.div`
+  background-color: #141414;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
 function App() {
   return (
-    <div className="App">
-        <Header />
-        <Projects />
-        <Contact />
-    </div>
+    <>
+      <GlobalStyle />
+      <AppStyles>
+          <Header />
+          <Content />
+      </AppStyles>
+    </>
   );
 }
 

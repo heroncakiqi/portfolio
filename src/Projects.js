@@ -2,11 +2,6 @@ import React from 'react'
 import styled from 'styled-components';
 
 const ProjectsStyles = styled.div`
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  margin: 0 auto;
-  flex-direction: column;
   h2 {
     margin-bottom: 30px;
     font-size: 1.7rem;
@@ -19,11 +14,13 @@ const ProjectsStyles = styled.div`
       align-items: flex-start;
       h3 {
         margin: 0;
-        margin-right: 8px;
+        margin-right: 0.5rem;
+        a {
+          text-decoration: none
+        }
       }
     }
     .app {
-      background-color: ;
       .tag {
         padding: 5px 10px;
         margin-left: 6px;
@@ -46,6 +43,8 @@ const ProjectsStyles = styled.div`
         background-color: #0769AD;
       }
       p {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
         color: #807E9A;
       }
     }
@@ -59,14 +58,16 @@ function Projects() {
       <div className="projects-list">
         <div className="app">
         <header>
-          <h3>heroncakiqi.com</h3>
+          <h3> <a href="https://heroncakiqi.com">heroncakiqi.com </a></h3>
           <span className="tag react">React</span>
         </header>
           <p>My personal portofolio website built with React.</p>
         </div>
         <div className="app">
           <header>
-            <h3>Voating app</h3>
+            <h3> 
+              <a href="https://github.com/heroncakiqi/voating-app" target="_blank">Voating app</a>
+            </h3>
             <span className="tag react">React</span>
             <span className="tag redux">Redux</span>
             <span className="tag express">express.js</span>
@@ -75,7 +76,9 @@ function Projects() {
         </div>
         <div className="app">
           <header>
-            <h3>Chat app</h3>
+            <h3>
+             <a href="https://github.com/heroncakiqi/chat-app" target="_blank">Chat app </a>
+            </h3>
             <span className="tag react">React</span>
             <span className="tag firebase">firebase</span>
           </header>
@@ -83,7 +86,9 @@ function Projects() {
         </div>
         <div className="app">
           <header>
-            <h3>Tello clone</h3>
+            <h3>
+              <a href="https://github.com/heroncakiqi/tello-clone" target="_blank">Tello clone</a>
+            </h3>
             <span className="tag react">React</span>
             <span className="tag redux">Redux</span>
           </header>
@@ -91,7 +96,9 @@ function Projects() {
         </div>
         <div className="app">
         <header>
-          <h3>Simon game</h3>
+          <h3>
+            <a href="https://codepen.io/heroncakiqi/pen/jmRKbP" target="_blank">Simon game</a>
+          </h3>
           <span className="tag jQuery">jQuery</span>
         </header>
         <p>Simon game.</p>
