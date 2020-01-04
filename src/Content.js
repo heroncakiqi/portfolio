@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Projects from './Projects';
-import Contact from './Contact';
+import Footer from './Footer';
 
 const ContentStyles = styled.section`
   font-family: 'Open Sans', sans-serif;
@@ -14,7 +14,7 @@ function Content() {
   return (
     <ContentStyles>
       <Projects />
-      <Contact />
+      <Footer />
     </ContentStyles>
   )
 }

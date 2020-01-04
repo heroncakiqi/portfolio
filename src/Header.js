@@ -20,6 +20,7 @@ const blink = keyframes`
 const Blinker = styled.span`
   animation: ${blink} 0.5s infinite ;
   color: orange;
+  position: absolute;
 `;
 
 const HeaderStyles = styled.header`
@@ -32,9 +33,8 @@ const HeaderStyles = styled.header`
   overflow: hidden;
   h1 {
     font-weight: 100;
-    white-space: pre-wrap;
+    white-space: pre-line;
     font-family: 'Roboto Mono', monospace;
-    text-align: center
   }
 `;
 

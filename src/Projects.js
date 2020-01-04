@@ -6,6 +6,10 @@ import firestore from './firebase';
 import ProjectItem from './ProjectItem';
 
 const ProjectsStyles = styled.div`
+  margin: 0 10px;
+  @media (min-width: 1024px) {
+    magrgin: 0px;
+  }
   h2 {
     margin-bottom: 30px;
     font-size: 1.7rem;

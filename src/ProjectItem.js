@@ -42,11 +42,10 @@ const ItemStyles = styled.div`
 `
 
 function ProjectItem({item}) {
-  console.log(item)
   return (
     <ItemStyles>
       <header>
-        <h3> <a href={item.url}>{item.name}</a></h3>
+        <h3> <a href={item.url} target="_blank">{item.name}</a></h3>
         {item.technologies.map(tech => <span className={`tag ${tech}`}>{tech}</span>)}
       </header>
       <p>{item.description}</p>
