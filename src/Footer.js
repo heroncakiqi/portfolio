@@ -18,10 +18,10 @@ function Footer() {
   return (
       <FooterStyles>
         <div className="icons-group">
-          <FaGithub />
-          <AiOutlineMail />
-          <FaCodepen />
-          <AiOutlineProfile />
+          <a href="https://github.com/heroncakiqi" target="_blank"><FaGithub /></a>
+          <a href="mailto:cakiqiheron@gmail.com" target="_blank"><AiOutlineMail /></a>
+          <a href="https://codepen.io/heroncakiqi" target="_blank"><FaCodepen /></a>
+          <a href=""><AiOutlineProfile /></a>
         </div>
       </FooterStyles>
   )
