@@ -2,4 +2,4 @@
 
 https://heroncakiqi.com/
 
-TODO: Footer, and changing the interfaces theme.
+TODO: rendering the pdf resume and changing the interfaces theme.
