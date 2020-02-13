@@ -1,6 +1,6 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components';
-import useWriting from './useWriting';
+import React from "react";
+import styled, { keyframes } from "styled-components";
+import useWriting from "./useWriting";
 
 const blink = keyframes`
 0% {
@@ -18,13 +18,13 @@ const blink = keyframes`
 `;
 
 const Blinker = styled.span`
-  animation: ${blink} 0.5s infinite ;
+  animation: ${blink} 0.5s infinite;
   color: orange;
   position: absolute;
 `;
 
 const HeaderStyles = styled.header`
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,20 +34,21 @@ const HeaderStyles = styled.header`
   h1 {
     font-weight: 100;
     white-space: pre-line;
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
   }
 `;
 
-
-
 function Header() {
-  const text = `heron cakiqi \n full stack developer`
+  const text = `heron cakiqi \n full stack developer`;
   const [state] = useWriting(text);
   return (
-        <HeaderStyles>
-          <h1>{state}<Blinker>_</Blinker></h1>
-        </HeaderStyles>
-  )
+    <HeaderStyles>
+      <h1>
+        {state}
+        <Blinker>_</Blinker>
+      </h1>
+    </HeaderStyles>
+  );
 }
 
-export default Header
+export default Header;

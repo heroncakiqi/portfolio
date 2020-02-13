@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react'
-import styled from 'styled-components';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import { useCollectionData } from "react-firebase-hooks/firestore";
 
-import firestore from './firebase';
-import ProjectItem from './ProjectItem';
+import firestore from "./firebase";
+import ProjectItem from "./ProjectItem";
 
 const ProjectsStyles = styled.div`
   margin: 0 10px;
@@ -21,17 +21,20 @@ const ProjectsStyles = styled.div`
 `;
 
 function Projects() {
-  const [value, loading, error] = useCollectionData(firestore.collection('projects'));
+  const [value, loading, error] = useCollectionData(
+    firestore.collection("projects").orderBy("priority")
+  );
   return (
     <ProjectsStyles>
       <h2>Latest Projects</h2>
       <div className="projects-list">
         {error && <strong>Error: {JSON.stringify(error)}</strong>}
         {loading && <span>Loading...</span>}
-        {value && value.map(item => <ProjectItem item={item} />)}
+        {value &&
+          value.map(item => <ProjectItem key={item.name} item={item} />)}
       </div>
     </ProjectsStyles>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
